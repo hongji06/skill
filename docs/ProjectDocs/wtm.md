@@ -10,3 +10,10 @@
 > wtmplus vue3 进到主页的时候切换多语言是正常，点进菜单后再切换多语言就不会在右上角切换语系显示。
 
 ![](./images/i18n_swicth_bug.gif)
+
+## 自己只能看到自己的创建或修改的资料
+
+> 这种情况不属于wtm的"数据权限"的概念, 因为完全可以这么写:
+```
+.Where(x => x.UpdateBy == LoginUserInfo.Id)
+```
