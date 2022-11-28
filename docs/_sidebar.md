@@ -7,3 +7,4 @@
   * [Tools](./ProjectDocs/tools.md)
 * WTM 框架学习
   * [wtm学习笔记](./ProjectDocs/wtm.md)
+  * [git学习笔记](./ProjectDocs/git.md)
