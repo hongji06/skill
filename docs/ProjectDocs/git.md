@@ -24,18 +24,26 @@ git merge dev
 
 
 > //删除分支
-> git branch -d qas
+```
+git branch -d qas
+```
 
 > 查看共有分支
-> git branch -a
+```
+git branch -a
+```
 ![](./images/2022-11-28-16-38-11.png)
 
 > 删除远程qas分支
-> git branch -r -d origin/qas
+```
+git branch -r -d origin/qas
+```
 ![](./images/2022-11-28-16-41-55.png)
 
 > 推送使远程分支生效
-> git push origin :qas
+```
+git push origin :qas
+```
 ![](./images/2022-11-28-16-45-36.png)
 
 ## 代理网络设置
