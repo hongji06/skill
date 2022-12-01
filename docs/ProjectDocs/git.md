@@ -46,6 +46,19 @@ git push origin :qas
 ```
 ![](./images/2022-11-28-16-45-36.png)
 
+## Git修改Log时间格式
+
+经常会使用git log去查看提交记录，但是默认展示的提交时间是如下格式的
+> Date:   Tue Nov 29 20:21:12 2022 +0800
+
+将提交时间格式化一下
+```
+git config --global log.date format:'%Y-%m-%d %H:%M:%S'
+```
+执行成功后，再执行git log命令，就可以看到格式良好的时间了
+> Date:   2022-11-29 20:21:12
+
+
 ## 代理网络设置
 
 > 代理IP请自行替换
