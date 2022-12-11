@@ -17,3 +17,34 @@
 ```
 .Where(x => x.UpdateBy == LoginUserInfo.Id)
 ```
+
+## 下拉选择框显示key-value
+
+> 修改代码ClientApp/src/components/page/field/script.ts:
+```
+// 加载数据源
+    async onRequest() {
+        this.spinning = true;
+        const startTime = Date.now()
+        try {
+            const res = await this.lodash.invoke(
+                this,
+                "_request",
+                this.lodash.cloneDeep(this.formState)
+            );
+            res.forEach(x=>x.label = x.label+'---'+x.value)
+            //console.error('test for me:',res)
+            this.dataSource = res;
+        } catch (error) {
+            console.error("LENG ~ onRequest", error)
+        }
+        if (this.dataSource.length > 0) {
+            const endTime = Date.now()
+            const diffTime = 400 - (endTime - startTime);
+            // 保证动画最少500考秒
+            await of(1).pipe(delay(diffTime > 0 ? diffTime : 0)).toPromise()
+        }
+        this.spinning = false;
+    }
+```
+![](images/2022-12-11-16-02-03.png)
